@@ -1,0 +1,67 @@
+[ca]
+default_ca  = CA_default
+
+
+[CA_default]
+base_dir    = .
+certificate = $base_dir/ca/ca.crt
+private_key = $base_dir/ca/ca.key
+new_certs_dir   = $base_dir/server
+database    = $base_dir/db/index.txt
+serial      = $base_dir/db/serial.txt
+unique_subject  = no
+
+default_md        = sha256
+
+name_opt          = ca_default
+cert_opt          = ca_default
+default_days      = 99999
+preserve          = no
+policy            = policy_strict
+
+
+[req]
+default_bits       = 4096
+default_md         = sha512
+default_keyfile    = key.pem
+prompt             = no
+encrypt_key        = no
+
+distinguished_name = req_distinguished_name
+
+req_extensions     = v3_req
+
+
+[req_distinguished_name]
+countryName            = "XX"
+stateOrProvinceName    = "Zion"
+localityName           = "Logos"
+postalCode             = "00000"
+streetAddress          = "Main deck"
+organizationName       = "Last human resistance"
+organizationalUnitName = "The Matrix"
+commonName             = "ca.vm"
+emailAddress           = "root@vm"
+
+
+[v3_req]
+subjectAltName  = DNS:vm,DNS:app.vm,DNS:*.vm,DNS:uvm,DNS:app.uvm,IP:192.168.137.1,IP:192.168.137.2,IP:192.168.137.3,IP:192.168.1.4,IP:192.168.1.5,IP:192.168.1.1,IP:192.168.1.2
+
+
+[signing_policy]
+countryName     = optional
+stateOrProvinceName = optional
+localityName        = optional
+organizationName    = optional
+organizationalUnitName  = optional
+commonName      = supplied
+emailAddress        = optional
+
+
+[signing_req]
+subjectKeyIdentifier=hash
+authorityKeyIdentifier=keyid,issuer
+
+basicConstraints = CA:FALSE
+keyUsage = digitalSignature, keyEncipherment
+

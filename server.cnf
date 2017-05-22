@@ -1,0 +1,39 @@
+[req]
+default_bits       = 4096
+default_md         = sha512
+default_keyfile    = server.key
+prompt             = no
+encrypt_key        = no
+
+distinguished_name = req_distinguished_name
+
+req_extensions     = v3_req
+
+[req_distinguished_name]
+countryName            = "XX"
+stateOrProvinceName    = "Zion"
+localityName           = "Logos"
+postalCode             = "00000"
+streetAddress          = "Main deck"
+organizationName       = "Last human resistance"
+organizationalUnitName = "The Matrix"
+commonName             = "app.vm"
+emailAddress           = "root@vm"
+
+[v3_req]
+subjectAltName  = @alt_names
+
+[alt_names]
+DNS.1 = vm
+DNS.2 = app.vm
+DNS.3 = *.vm
+DNS.4 = uvm
+DNS.5 = app.uvm
+IP.1 = 192.168.137.1
+IP.2 = 192.168.137.2
+IP.3 = 192.168.137.3
+IP.4 = 192.168.137.4
+IP.5 = 192.168.137.5
+IP.6 = 192.168.1.1
+IP.7 = 192.168.1.2
+
