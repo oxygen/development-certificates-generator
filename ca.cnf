@@ -45,7 +45,7 @@ emailAddress           = "root@vm"
 
 
 [v3_req]
-subjectAltName  = DNS:vm,DNS:app.vm,DNS:uvm,DNS:app.uvm,IP:192.168.137.1,IP:192.168.137.2,IP:192.168.137.3,IP:192.168.1.4,IP:192.168.1.5,IP:192.168.1.1,IP:192.168.1.2
+subjectAltName  = DNS:vm,DNS:app.vm,DNS:uvm,DNS:app.uvm,DNS:app.wvm,IP:192.168.137.1,IP:192.168.137.2,IP:192.168.137.3,IP:192.168.1.4,IP:192.168.1.5,IP:192.168.1.1,IP:192.168.1.2
 
 
 [signing_policy]

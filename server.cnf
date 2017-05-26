@@ -28,6 +28,7 @@ DNS.1 = vm
 DNS.2 = app.vm
 DNS.3 = uvm
 DNS.4 = app.uvm
+DNS.5 = app.wvm
 IP.1 = 192.168.137.1
 IP.2 = 192.168.137.2
 IP.3 = 192.168.137.3
