@@ -5,7 +5,7 @@ default_ca  = CA_default
 [CA_default]
 base_dir    = .
 certificate = $base_dir/ca/ca.crt
-private_key = $base_dir/ca/ca.key
+private_key = $base_dir/ca/ca.pem
 new_certs_dir   = $base_dir/server
 database    = $base_dir/db/index.txt
 serial      = $base_dir/db/serial.txt

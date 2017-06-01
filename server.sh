@@ -2,8 +2,8 @@ mkdir ./csr
 mkdir ./server
 mkdir ./db
 
-openssl genrsa -out server/server.key 4096
-openssl req -new -sha256 -key server/server.key -out csr/server.csr -config server.cnf
+openssl genrsa -out server/server.pem 4096
+openssl req -new -sha256 -key server/server.pem -out csr/server.csr -config server.cnf
 rm -f db/index.txt
 rm -f db/serial.txt
 touch db/index.txt
