@@ -28,7 +28,7 @@ certutil -addstore -f "ROOT" ca/ca.crt
 
 
 ### iOS
-I installed it by emailing it as an attachment and then going through some dialogs.
+Serve the ca.crt file through http(s), with this header: `Content-Type: application/x-x509-ca-cert`
 
 
 ### Android
